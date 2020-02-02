@@ -1,12 +1,25 @@
 ---
 title: "About"
+knit: (function(input_file, encoding) {
+  out_dir <- 'html';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(rprojroot::find_rstudio_root_file(), out_dir, 'index.html'))})
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
+# Change index.html above to about.html, once site is setup
+# For now, I'm following the instructions at:
+# https://resources.github.com/whitepapers/github-and-rstudio/
+# In these instructions, the first part of file.path was 'dirname(input_file)' assuming the file
+# was in the main directory. However, I'm following my practice of putting .Rmd files in the 
+# rmarkdown directory. To get knitr to work, I've used the rprojroot command to redirect to main
+# directory.  
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 ```
+
 
 ## About the Project
 
