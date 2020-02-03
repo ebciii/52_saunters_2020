@@ -17,13 +17,13 @@ Inspired by the [52 Hike Challenge](https://www.52hikechallenge.com/), I am taki
 
 | Date    | Park                  | Trail  |
 |---------|-----------------------|-------------|
-|1-Jan-20| Marsh Creek State Park	|White Trail|
+|1-Jan-20| Marsh Creek State Park	|[White Trail](https://www.alltrails.com/explore/recording/marsh-creek-trail--382)|
 |5-Jan-20| Wissahickon	          |Carpenter's Woods Trails|
 |11-Jan-20|Wissahickon	          |Towanda>White>Lavender|
-|12-Jan-20|Delaware Water Gap	    |Mt Minsi via AT|
+|12-Jan-20|Delaware Water Gap	    |[Mt Minsi via AT](https://www.alltrails.com/explore/recording/mount-minsi-via-appalachian-trail--1464)|
 |15-Jan-20|Wissahickon	          |Kitchens Lane>White>Orange|
-|19-Jan-20|	Hopewell FurnaceNHS/French Creek State Park	|Lenape Trail to Mill Creek Trail Loop|
-|26-Jan-20|	Hickory Run SP	      |Shades of Death|
+|19-Jan-20|	Hopewell FurnaceNHS/French Creek State Park	|[Lenape Trail to Mill Creek Trail Loop](https://www.alltrails.com/explore/recording/lenape-trail-to-mill-creek-trail-loop--69)|
+|26-Jan-20|	Hickory Run SP	      |[Shades of Death](https://www.alltrails.com/explore/recording/shades-of-death-trail--588)|
 
 ```{r}
 
