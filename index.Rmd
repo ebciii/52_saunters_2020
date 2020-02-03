@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-Inspired by the [52 Hike Challenge](https://www.52hikechallenge.com/), I am taking my own approach, by taking a weekly "saunter" in a different local trail for every week of 2020. These hikes will be summarized in a table on the home page with links to tracking software sites, so that folks can take their own saunters (If you are curious about the name, see the [*About* page](about.html).  
+Inspired by the [52 Hike Challenge](https://www.52hikechallenge.com/), I am taking my own approach, by taking a weekly "saunter" in a different local trail for every week of 2020. These hikes will be summarized in a table on the home page with links to tracking software sites, so that folks can take their own saunters (If you are curious about the name, see the [*About* page](about.html)).  
 
 ---
 
