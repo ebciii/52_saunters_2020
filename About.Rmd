@@ -1,11 +1,5 @@
 ---
 title: "About"
-knit: (function(input_file, encoding) {
-  out_dir <- 'html';
-  rmarkdown::render(input_file,
- encoding=encoding,
- output_file=file.path(rprojroot::find_rstudio_root_file(), out_dir, 'index.html'))})
-output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -16,11 +10,24 @@ output: html_document
 # was in the main directory. However, I'm following my practice of putting .Rmd files in the 
 # rmarkdown directory. To get knitr to work, I've used the rprojroot command to redirect to main
 # directory.  
+# These elements were used initially to build the first html file:
+# knit: (function(input_file, encoding) {
+#   out_dir <- 'html';
+#   rmarkdown::render(input_file,
+#  encoding=encoding,
+#  output_file=file.path(rprojroot::find_rstudio_root_file(), out_dir, 'index.html'))})
+# output: html_document
 knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+# knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 ```
 
+Name: E Bryan Crenshaw III, PhD
 
-## About the Project
+The name, *52 Weekly Saunter Challenge*, is derived from a quote ascribed to [John Muir](https://www.etymonline.com/columns/post/john-muir-and-%27saunter%27):
 
-Inspired by the [52 Hike Challenge](https://www.52hikechallenge.com/), I am taking my own approach, by taking a weekly "saunter" in a different local trail for every week of 2020. These hikes will be summarized in a table on the home page with links to tracking software sites, so that folks can take their own saunters.   
+>
+     Hiking - "I don't like either the word or the thing. People ought to saunter in the mountains - not hike! Do you know the origin of that word 'saunter?' It's a beautiful word. Away back in the Middle Ages people used to go on pilgrimages to the Holy Land, and when people in the villages through which they passed asked where they were going, they would reply, 'A la sainte terre,' 'To the Holy Land.' And so they became known as sainte-terre-ers or saunterers. Now these mountains are our Holy Land, and we ought to saunter through them reverently, not 'hike' through them." 
+- John Muir 
+>
+
+I am certified as a Sierra Club Outings leader, and my main focus with the Sierra Club is getting veterans into nature at Camp Elk Tannery in rural Pennsylvania. I use [Alltrails](https://www.alltrails.com/members/ebcrenshaw3) and/or [FitBit](https://www.fitbit.com/us/home) to track my hikes. 

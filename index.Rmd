@@ -1,5 +1,5 @@
 ---
-title: "index"
+title: "Bryan Crenshaw's 52 Weekly Saunter Challenge"
 output: html_document
 ---
 
@@ -7,22 +7,25 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Inspired by the [52 Hike Challenge](https://www.52hikechallenge.com/), I am taking my own approach, by taking a weekly "saunter" in a different local trail for every week of 2020. These hikes will be summarized in a table on the home page with links to tracking software sites, so that folks can take their own saunters (If you are curious about the name, see the [*About* page](about.html).  
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+---
 
-```{r cars}
-summary(cars)
+## Hikes Thus Far ##
+
+
+| Date    | Park                  | Trail  |
+|---------|-----------------------|-------------|
+|1-Jan-20| Marsh Creek State Park	|White Trail|
+|5-Jan-20| Wissahickon	          |Carpenter's Woods Trails|
+|11-Jan-20|Wissahickon	          |Towanda>White>Lavender|
+|12-Jan-20|Delaware Water Gap	    |Mt Minsi via AT|
+|15-Jan-20|Wissahickon	          |Kitchens Lane>White>Orange|
+|19-Jan-20|	Hopewell FurnaceNHS/French Creek State Park	|Lenape Trail to Mill Creek Trail Loop|
+|26-Jan-20|	Hickory Run SP	      |Shades of Death|
+
+```{r}
+
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

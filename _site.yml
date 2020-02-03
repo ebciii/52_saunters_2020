@@ -3,10 +3,10 @@ output_dir: "docs"
 navbar:
   title: "52 Week Saunter Challenge"
   left:
-  - text: "Home"
-   href: index.html
-  - text: "About"
-   href: about.html
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
 output:
   html_document:
- theme: cosmo
+    theme: cosmo
