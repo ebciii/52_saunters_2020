@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-Inspired by the [52 Hike Challenge](https://www.52hikechallenge.com/), I am taking my own approach, by taking a weekly "saunter" in a different local trail for every week of 2020. These hikes will be summarized in a table on the home page with links to tracking software sites, so that folks can take their own saunters (If you are curious about the name, see the [*About* page](about.html)).  
+Inspired by the [52 Hike Challenge](https://www.52hikechallenge.com/), I am taking my own approach, by going on a weekly "saunter" on a different local trail for every week of 2020. These hikes will be summarized in a table below with links to the route on tracking software sites, in case you are interested in taking your own saunter along those trails. If you are curious about why I use the term saunter, instead of hike, it comes from a quote by John Muir, who also preferred the term saunter (see the [*About* page](about.html) for details).  
 
 ---
 
@@ -24,6 +24,8 @@ Inspired by the [52 Hike Challenge](https://www.52hikechallenge.com/), I am taki
 |15-Jan-20|Wissahickon	          |Kitchens Lane>White>Orange|
 |19-Jan-20|	Hopewell FurnaceNHS/French Creek State Park	|[Lenape Trail to Mill Creek Trail Loop](https://www.alltrails.com/explore/recording/lenape-trail-to-mill-creek-trail-loop--69)|
 |26-Jan-20|	Hickory Run SP	      |[Shades of Death](https://www.alltrails.com/explore/recording/shades-of-death-trail--588)|
+|03-Feb-20|	Hickory Run SP	      |[Skyline>Fireline from Hickory Run](https://www.alltrails.com/explore/recording/skyline-trail--5929)|
+|08-Feb-20|	Nolde Forest SP       |[Nolde Forest Trail](https://www.alltrails.com/explore/recording/nolde-forest-trail--412)|
 
 ```{r}
 
