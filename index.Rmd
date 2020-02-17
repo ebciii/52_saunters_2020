@@ -1,33 +1,66 @@
 ---
-title: "Bryan Crenshaw's 52 Weekly Saunter Challenge"
+title: "Bryan Crenshaw's 52 Saunters Challenge 2020"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
 ```
 
 
-Inspired by the [52 Hike Challenge](https://www.52hikechallenge.com/), I am taking my own approach, by going on a weekly "saunter" on a different local trail for every week of 2020. These hikes will be summarized in a table below with links to the route on tracking software sites, in case you are interested in taking your own saunter along those trails. If you are curious about why I use the term saunter, instead of hike, it comes from a quote by John Muir, who also preferred the term saunter (see the [*About* page](about.html) for details).  
+Inspired by the [52 Hike Challenge](https://www.52hikechallenge.com/), I am taking my own approach, by going on a "saunter" on a different trail averaging one for every week of 2020. These hikes will be summarized in a table below with links to the route on tracking software sites, in case you are interested in taking your own saunter along those trails. If you are curious about why I use the term saunter, instead of hike, it comes from a quote by John Muir, who also preferred the term saunter (see the [*About* page](about.html) for details).  
 
 ---
 
-## Hikes Thus Far ##
+## Outings Log ##
 
-
-| Date    | Park                  | Trail  |
-|---------|-----------------------|-------------|
-|1-Jan-20| Marsh Creek State Park	|[White Trail](https://www.alltrails.com/explore/recording/marsh-creek-trail--382)|
-|5-Jan-20| Wissahickon	          |Carpenter's Woods Trails|
-|11-Jan-20|Wissahickon	          |Towanda>White>Lavender|
-|12-Jan-20|Delaware Water Gap	    |[Mt Minsi via AT](https://www.alltrails.com/explore/recording/mount-minsi-via-appalachian-trail--1464)|
-|15-Jan-20|Wissahickon	          |Kitchens Lane>White>Orange|
-|19-Jan-20|	Hopewell FurnaceNHS/French Creek State Park	|[Lenape Trail to Mill Creek Trail Loop](https://www.alltrails.com/explore/recording/lenape-trail-to-mill-creek-trail-loop--69)|
-|26-Jan-20|	Hickory Run SP	      |[Shades of Death](https://www.alltrails.com/explore/recording/shades-of-death-trail--588)|
-|03-Feb-20|	Hickory Run SP	      |[Skyline>Fireline from Hickory Run](https://www.alltrails.com/explore/recording/skyline-trail--5929)|
-|08-Feb-20|	Nolde Forest SP       |[Nolde Forest Trail](https://www.alltrails.com/explore/recording/nolde-forest-trail--412)|
-
-```{r}
+```{r LoadLibraries}
+library(openxlsx)
+suppressPackageStartupMessages(library(dplyr))
+library(tidyr)
+library(knitr)
+library(stringr)
+library(kableExtra)
 
 ```
+
+```{r Functions}
+
+# blank_href <- function()
+```
+
+
+```{r Input Data}
+
+hikes  <-  read.xlsx('data/52-Hike-Challenge-Hiking-Log_2020.xlsx', startRow = 6) 
+names(hikes) <- c('hike_num', 'date', 'park_area', 'trail', 'distance', 'time', 'elevation_gain', 'difficulty', 'recording_app', 'recording_html')
+
+hikes <- 
+  hikes %>% 
+  mutate(date = convertToDate(date)) %>% 
+  drop_na(date, park_area, trail)
+
+# Prepare df for output
+hikes_out <- 
+  hikes %>% 
+  mutate(date = format(date, "%d-%b-%y")) %>% 
+  mutate(Trail = cell_spec(trail, "html", link = recording_html)) %>%
+  rename(Date = date, Park = park_area) %>%
+  select(Date, Park, Trail)  %>% 
+  mutate(Trail = ifelse(str_detect(Trail, 'href="NA"'), 
+                            str_extract(Trail, "(?<=\\>).+(?=\\<)"), 
+                            Trail)
+         )
+# ^^^ In the final mutate above, the cell_spec() generates a link with no target
+# Therefore, the blank links (e.g. href="NA") were converted to just the name - no link to nowhere. 
+
+# Output to table
+knitr::kable(hikes_out, caption = NULL, escape = FALSE) %>%
+  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+                              # full_width = FALSE,
+                              position = "left")
+```
+
 
