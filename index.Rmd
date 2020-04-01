@@ -34,7 +34,7 @@ library(kableExtra)
 ```{r Input Data}
 
 hikes  <-  read.xlsx('data/52-Hike-Challenge-Hiking-Log_2020.xlsx', startRow = 6) 
-names(hikes) <- c('hike_num', 'date', 'park_area', 'trail', 'distance', 'time', 'elevation_gain', 'difficulty', 'recording_app', 'recording_html')
+names(hikes) <- c('hike_num', 'date', 'park_area', 'trail', 'distance', 'time', 'elevation_gain', 'difficulty', 'recording_app', 'recording_html', 'notes')
 
 hikes <- 
   hikes %>% 
@@ -52,8 +52,8 @@ hikes_out <-
                             str_extract(Trail, "(?<=\\>).+(?=\\<)"), 
                             Trail)
          )
-# ^^^ In the final mutate above, the cell_spec() generates a link with no target
-# Therefore, the blank links (e.g. href="NA") were converted to just the name - no link to nowhere. 
+# ^^^ In the final mutate above, the cell_spec() can generate a link with no target. Therefore,
+# the blank links (e.g. href="NA") were converted to just the trail title without a link to nowhere.
 
 # Output to table
 knitr::kable(hikes_out, caption = NULL, escape = FALSE) %>%
