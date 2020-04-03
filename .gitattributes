@@ -1,3 +1,4 @@
 *.xlsx filter=lfs diff=lfs merge=lfs -text
 site_libs/* linguist-vendored
+*.Rmd linguist-detectable
 *.Rmd linguist-language=R
