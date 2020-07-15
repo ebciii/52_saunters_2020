@@ -7,6 +7,8 @@ output: html_document
 knitr::opts_chunk$set(echo = FALSE,
                       warning = FALSE,
                       message = FALSE)
+# For more info: < https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html >
+# Also: https://resources.github.com/whitepapers/github-and-rstudio/
 ```
 
 Inspired by the [52 Hike Challenge](https://www.52hikechallenge.com/), I am taking my own approach, by going on a "saunter" on a different trail averaging one for every week of 2020. These hikes will be summarized in a table below with links to the route on tracking software sites, in case you are interested in taking your own saunter along those trails. If you are curious about why I use the term saunter, instead of hike, it comes from a quote by John Muir, who also preferred the term saunter (see the [*About* page](about.html) for details).  
